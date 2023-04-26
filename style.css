@@ -8,28 +8,158 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: minmax(200px, 15%) repeat(auto-fit, minmax(100px, 4fr));
-  grid-template-rows: minmax(100px, 15%) repeat(auto-fit, minmax(400px, 3fr));
+  grid-template-columns: minmax(150px, 15%) repeat(auto-fit, minmax(100px, 4fr));
+  grid-template-rows: minmax(100px, 20%) repeat(auto-fit, minmax(400px, 3fr));
   grid-template-areas: "sidebar header" "sidebar main-content";
 }
+
+/* Header section */
 
 .header {
   background-color: #ffe;
   grid-area: header;
+  display: grid;
+  padding: 10px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
 }
+
+/* Top header */
+.top-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 3fr) minmax(170px,1fr));
+}
+
+/* Begin search area */
+.search-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 35px minmax(120px, 50%));
+  gap: 5px;
+  padding: 7px 0;
+}
+
+.search-area label {
+  border: 1px solid black;
+  height: 25px;
+}
+
+input[type=search] {
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+  background-color: gainsboro;
+  height: 25px;
+}
+
+input[type=search]:hover {
+  border-color: 1px solid rgb(150, 148, 148);
+  box-shadow: 1px 1.5px 3px 0 rgb(150, 148, 148);
+}
+
+input[type=search]:focus {
+  border: 1px solid rgb(88, 88, 88);
+  box-shadow: inset 1px 1.5px 3px 0 rgb(150, 148, 148);
+}
+
+/* End Search area */
+
+.notification-area {
+  display: grid;
+  grid-template-columns: 25px 40px 1fr;
+  grid-template-rows: 1fr;
+  padding: 5px;
+  gap: 5px;
+}
+
+.bell,.notification-area > .avatar {
+  border: 1px solid black;
+  height: 25px;
+}
+
+
+/* Bottom header */
+
+.bottom-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 3fr) minmax(170px,1fr));
+}
+
+.left-side {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 5px;
+}
+
+.avatar {
+  border: 1px solid black;
+  height: 50px;
+}
+
+.right-side {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.right-side > button {
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid rgb(75, 75, 255);
+  color: white;
+  background-color: rgb(75, 75, 255);
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.right-side > button:hover {
+  background-color: rgb(113, 113, 255);
+  border: none;
+  box-shadow: 1px 1.5px 3px 0  rgb(113, 113, 255);
+}
+
+.right-side > button:active {
+  background-color: rgb(54, 54, 196);
+  border: none;
+  box-shadow: inset 1px 1.5px 3px 0  rgb(34, 34, 107);
+}
+/* Sidebar Section */
 
 .sidebar {
   background-color: dodgerblue;
   grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
 }
+
+.sidebar-sections {
+  margin: 10px;
+  font-size: 1em;
+}
+
+.sidebar-sections .dash {
+  font-size: 1.5em;
+}
+
+.sidebar-sections .label {
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Main-content Section */
 
 .main-content {
   background-color: gainsboro;
   grid-area: main-content;
+  box-shadow: inset 0 1px 3px 0 gray;
 }

@@ -4,19 +4,22 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  background-color: darkslategray;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  /* max-width: 1500px; */
   display: grid;
-  grid-template-columns: minmax(150px, 15%) repeat(auto-fit, minmax(100px, 4fr));
-  grid-template-rows: minmax(100px, 20%) repeat(auto-fit, minmax(400px, 3fr));
+  grid-template-columns: minmax(150px, 20%) repeat(auto-fit, minmax(100px, 4fr));
+  grid-template-rows: minmax(100px, 15%) repeat(auto-fit, minmax(400px, 3fr));
   grid-template-areas: "sidebar header" "sidebar main-content";
 }
 
@@ -29,32 +32,33 @@ body {
   padding: 10px;
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
+  font-size: 13px;
 }
 
 /* Top header */
 .top-header {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 3fr) minmax(170px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 2fr) minmax(170px,1fr));
 }
 
 /* Begin search area */
 .search-area {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 35px minmax(120px, 50%));
+  grid-template-columns: repeat(auto-fill, 20px minmax(120px, 90%));
   gap: 5px;
   padding: 7px 0;
 }
 
 .search-area label {
   border: 1px solid black;
-  height: 25px;
+  height: 20px;
 }
 
 input[type=search] {
   border: 1px solid gainsboro;
   border-radius: 20px;
   background-color: gainsboro;
-  height: 25px;
+  height: 20px;
 }
 
 input[type=search]:hover {
@@ -70,8 +74,9 @@ input[type=search]:focus {
 /* End Search area */
 
 .notification-area {
+  justify-self: end;
   display: grid;
-  grid-template-columns: 25px 40px 1fr;
+  grid-template-columns: 20px 40px 1fr;
   grid-template-rows: 1fr;
   padding: 5px;
   gap: 5px;
@@ -87,18 +92,18 @@ input[type=search]:focus {
 
 .bottom-header {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 3fr) minmax(170px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 2fr) minmax(170px,1fr));
 }
 
 .left-side {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 35px 1fr;
   gap: 5px;
 }
 
 .avatar {
   border: 1px solid black;
-  height: 50px;
+  height: 35px;
 }
 
 .right-side {
@@ -108,7 +113,7 @@ input[type=search]:focus {
 }
 
 .right-side > button {
-  height: 30px;
+  height: 20px;
   border-radius: 20px;
   border: 1px solid rgb(75, 75, 255);
   color: white;
@@ -162,4 +167,63 @@ a {
   background-color: gainsboro;
   grid-area: main-content;
   box-shadow: inset 0 1px 3px 0 gray;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 3fr) minmax(150px, 1fr));
+}
+
+.main-container {
+  grid-template-rows: 40px 1fr;
+  padding: 10px;
+}
+
+.sub-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  font-size: 11px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+.announcements-section {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  padding: 10px;
+}
+
+.trending-section {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  padding: 10px;
+}
+
+.heading-area {
+  font-size: min(2.5vw, 20px);
+  font-size: max(2.5vw, 16px);
+  font-weight: bold;
+}
+
+.display-area {
+  background-color: #ffe;
+}
+
+.top-head {
+  padding-left: 10px;
+}
+
+.bottom-body {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 145px);
+  gap: 10px;
+}
+
+.projects {
+  display: grid;
+  grid-template-rows: 1fr 20px;
+  font-size: min(2vw, 13px);
+  font-size: max(1.5vw,  10px);
+  background-color: #ffe;
 }

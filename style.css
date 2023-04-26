@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: minmax(200px, 15%) repeat(auto-fit, minmax(100px, 4fr));
+  grid-template-rows: minmax(100px, 15%) repeat(auto-fit, minmax(400px, 3fr));
+  grid-template-areas: "sidebar header" "sidebar main-content";
+}
+
+.header {
+  background-color: #ffe;
+  grid-area: header;
+}
+
+.sidebar {
+  background-color: dodgerblue;
+  grid-area: sidebar;
+}
+
+.main-content {
+  background-color: gainsboro;
+  grid-area: main-content;
+}

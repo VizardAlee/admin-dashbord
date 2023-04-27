@@ -168,7 +168,7 @@ a {
   grid-area: main-content;
   box-shadow: inset 0 1px 3px 0 gray;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 3fr) minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 3fr) minmax(150px, 0.8fr));
 }
 
 .main-container {
@@ -176,41 +176,6 @@ a {
   padding: 10px;
 }
 
-.sub-container {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  font-size: 11px;
-}
-
-h5 {
-  font-size: 12px;
-}
-
-.announcements-section {
-  display: grid;
-  grid-template-rows: 40px 1fr;
-  padding: 10px;
-}
-
-.trending-section {
-  display: grid;
-  grid-template-rows: 40px 1fr;
-  padding: 10px;
-}
-
-.heading-area {
-  font-size: min(2.5vw, 20px);
-  font-size: max(2.5vw, 16px);
-  font-weight: bold;
-}
-
-.display-area {
-  background-color: #ffe;
-}
-
-.top-head {
-  padding-left: 10px;
-}
 
 .bottom-body {
   padding: 10px;
@@ -222,8 +187,78 @@ h5 {
 
 .projects {
   display: grid;
+  border-left: 4px  solid orange;
   grid-template-rows: 1fr 20px;
   font-size: min(2vw, 13px);
-  font-size: max(1.5vw,  10px);
-  background-color: #ffe;
+  font-size: max(1vw,  10px);
+  background-color: #fff;
+  padding: 10px 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 gray;
+}
+
+.texts > h4 {
+  margin-bottom: 5px;
+}
+
+
+.sub-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  font-size: 11px;
+}
+
+h5 {
+  font-size: 11px;
+}
+
+.announcements-section {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  padding: 10px;
+}
+
+.announcements-section .display-area .not-last {
+  border-bottom: 1px solid rgb(196, 193, 193);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.trending-section {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  padding: 10px;
+}
+
+.trending-section .display-area {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.slot {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 2px;
+}
+
+.at-handle {
+  font-weight: bold;
+}
+.heading-area {
+  font-size: min(2.5vw, 20px);
+  font-size: max(2vw, 16px);
+  font-weight: bold;
+}
+
+.display-area {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 gray;
+  font-size: min(1vw, 11px);
+  font-size: max(0.9vw, 9px);
+}
+
+.top-head {
+  padding-left: 10px;
 }
